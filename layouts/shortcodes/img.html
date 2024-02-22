@@ -1,0 +1,14 @@
+{{- $img := .Page.Resources.Get (.Get 0) }}
+<h2>Original</h2>
+<p>{{ $img.Permalink }}</p>
+<img src="{{ $img.Permalink }}" />
+
+{{- $resized := $img.Resize "200x" }}
+<h2>Resized</h2>
+<p>{{ $resized.Permalink }}</p>
+<img src="{{ $resized.Permalink }}" />
+
+{{- $filtered := $img | images.Filter (images.Pixelate 100) }}
+<h2>Filtered</h2>
+<p>{{ $filtered.Permalink }}</p>
+<img src="{{ $filtered.Permalink }}" />

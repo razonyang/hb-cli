@@ -1,0 +1,8 @@
+[build]
+writeStats = true
+
+[languages.en]
+baseURL = "http://example.org"
+
+[languages.zh-hans]
+baseURL = "http://zh-hans.example.org"
