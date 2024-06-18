@@ -1,0 +1,18 @@
+{{- $page := . }}
+{{ $t := debug.Timer "page-taxonomies" }}
+{{- range $kind := slice "tags" "categories" }}
+  {{ $t1 := printf "page-taxonomies-%s" $kind | debug.Timer }}
+  {{- with $page.GetTerms $kind }}
+    {{- range . }}
+      <span class="blog-post-taxonomy-meta">
+        <a
+          class="blog-post-taxonomy blog-post-taxonomy badge bg-secondary text-decoration-none fw-normal me-1"
+          href="{{ .RelPermalink }}">
+          {{- .Title -}}
+        </a>
+      </span>
+    {{- end }}
+  {{- end }}
+  {{ $t1.Stop }}
+{{- end -}}
+{{ $t.Stop }}
