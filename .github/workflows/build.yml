@@ -42,7 +42,7 @@ jobs:
           extended: true
           hugo-version: ${{ matrix.version }}
 
-      - run: npx lorem-ipsum-generator -n 1000 --tag-count ${{ matrix.tags }}
+      - run: npx lorem-ipsum-generator -n 1000 --tag-count ${{ matrix.tags }} --category-count 0 --series-count 0
 
       - name: Build
         run: hugo --minify | npx hugo-metrics-parser

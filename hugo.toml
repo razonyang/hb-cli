@@ -1,35 +1,3 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-
-[[cascade]]
-[cascade._target]
-path = "/{1001-2000,2001-3000,3001-4000,4001-5000,5001-6000,6001-7000,7001-8000,8001-9000,9001-10000}/**"
-environment = "prod-1k"
-[cascade.build]
-list = "never"
-render = "never"
-
-[[cascade]]
-[cascade._target]
-path = "/{3001-4000,4001-5000,5001-6000,6001-7000,7001-8000,8001-9000,9001-10000}/**"
-environment = "prod-3k"
-[cascade.build]
-list = "never"
-render = "never"
-
-[[cascade]]
-[cascade._target]
-path = "/{5001-6000,6001-7000,7001-8000,8001-9000,9001-10000}/**"
-environment = "prod-5k"
-[cascade.build]
-list = "never"
-render = "never"
-
-[[cascade]]
-[cascade._target]
-path = "/{7001-8000,8001-9000,9001-10000}/**"
-environment = "prod-7k"
-[cascade.build]
-list = "never"
-render = "never"

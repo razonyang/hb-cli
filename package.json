@@ -2,15 +2,6 @@
   "name": "hugo-testing",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "create": "npx lorem-ipsum-generator -n 10000 --tag-count 10",
-    "clean": "rm -rf ./public",
-    "build": "npm run clean && hugo --logLevel info",
-    "build-1k": "npm run clean && hugo --logLevel info -e prod-1k",
-    "build-3k": "npm run clean && hugo --logLevel info -e prod-3k",
-    "build-5k": "npm run clean && hugo --logLevel info -e prod-5k",
-    "build-7k": "npm run clean && hugo --logLevel info -e prod-7k"
-  },
   "author": "",
   "license": "ISC",
   "description": "",
