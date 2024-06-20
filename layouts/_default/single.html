@@ -1,7 +1,5 @@
 {{- $page := . }}
-{{ $t := debug.Timer "page-taxonomies" }}
 {{- range $kind := slice "tags" "categories" }}
-  {{ $t1 := printf "page-taxonomies-%s" $kind | debug.Timer }}
   {{- with $page.GetTerms $kind }}
     {{- range . }}
       <span class="blog-post-taxonomy-meta">
@@ -13,6 +11,4 @@
       </span>
     {{- end }}
   {{- end }}
-  {{ $t1.Stop }}
 {{- end -}}
-{{ $t.Stop }}
