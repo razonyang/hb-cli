@@ -1,0 +1,4 @@
+{{ $data := dict
+  "version" 2
+}}
+{{ jsonify $data }}

@@ -1,0 +1,11 @@
+outputFormats:
+  SearchIndex:
+    baseName: 'Search'
+    isPlainText: true
+    mediaType: 'application/json'
+    noAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - SearchIndex
